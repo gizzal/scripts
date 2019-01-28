@@ -51,9 +51,9 @@ INSTALLER="${HOME}/forge/setup.exe"
 # Run the installer
 POL_Wine_WaitBefore "$TITLE"
 POL_Wine "$INSTALLER"
-
-POL_Shortcut "${HOME}/forge/setup.exe" "Forge $APP_ANSWER"
-
+POL_SetupWindow_message "Please follow the instructions of Forge installer and then press Next"
+POL_Shortcut "Forge.exe" "Forge $APP_ANSWER"
+              
 # All done
 POL_SetupWindow_message "You can use Forge $APP_ANSWER now, thanks for using the tool, $AUTHOR"
  
