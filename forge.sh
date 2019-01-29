@@ -2,7 +2,7 @@
 [ "$PLAYONLINUX" = "" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
 
-PREFIX="forgeFhir3"
+PREFIX="Forge"
 WINEVERSION="2.20-staging"
 TITLE="Firely Forge Tool"
 EDITOR="Firely."
@@ -51,8 +51,9 @@ INSTALLER="${HOME}/forge/setup.exe"
 # Run the installer
 POL_Wine_WaitBefore "$TITLE"
 POL_Wine "$INSTALLER"
+cp "${HOME}/forge/setup.exe" "${HOME}/.PlayOnLinux/wineprefix/Forge/drive_c/forge_launcher.exe"
 POL_SetupWindow_message "Please follow the instructions of Forge installer and then press Next"
-POL_Shortcut "Forge.exe" "Forge $APP_ANSWER"
+POL_Shortcut "forge_launcher.exe" "Forge $APP_ANSWER"
               
 # All done
 POL_SetupWindow_message "You can use Forge $APP_ANSWER now, thanks for using the tool, $AUTHOR"
